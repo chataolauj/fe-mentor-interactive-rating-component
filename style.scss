@@ -71,6 +71,8 @@ $orange: hsl(25, 97%, 53%);
 			padding: 12px;
 			background-color: $orange;
 			color: $white;
+			font-weight: 700;
+			letter-spacing: 0.2rem;
 			border-radius: 50px;
 			border: none;
 
@@ -90,6 +92,7 @@ $orange: hsl(25, 97%, 53%);
 	}
 
 	#confirmation-view {
+		display: none;
 		padding: 40px 30px;
 		align-items: center;
 
