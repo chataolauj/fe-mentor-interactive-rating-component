@@ -14,6 +14,7 @@ $orange: hsl(25, 97%, 53%);
 
 .container {
 	display: flex;
+	gap: 15px;
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
@@ -22,7 +23,6 @@ $orange: hsl(25, 97%, 53%);
 
 	.component {
 		display: flex;
-		flex-direction: column;
 		justify-content: space-between;
 		width: 400px;
 		height: 400px;
@@ -36,18 +36,57 @@ $orange: hsl(25, 97%, 53%);
 			color: $light-grey;
 			line-height: 1.5em;
 		}
+	}
+
+	#form-view {
+		flex-direction: column;
 
 		.rating-group {
 			display: flex;
 			justify-content: space-between;
+
+			.circle-container {
+				border: none;
+
+				&:hover {
+					cursor: pointer;
+					background-color: $medium-grey;
+					color: $white;
+				}
+
+				&:focus-visible {
+					background-color: $orange;
+					color: $white;
+					border: none;
+					box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+				}
+			}
+
+			.active {
+				background-color: $orange;
+				color: $white;
+			}
 		}
 
-		button {
-			padding: 10px;
+		button[type="submit"] {
+			padding: 12px;
 			background-color: $orange;
 			color: $white;
 			border-radius: 50px;
 			border: none;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&:active {
+				background-color: $white;
+				color: $orange;
+			}
+
+			&:focus-visible {
+				outline: solid $medium-grey;
+			}
 		}
 	}
 
@@ -59,11 +98,20 @@ $orange: hsl(25, 97%, 53%);
 		height: 40px;
 		padding: 10px;
 		border-radius: 50px;
-		background-color: $medium-grey;
+		background-color: hsla(217, 12%, 63%, 0.1);
+		color: $light-grey;
 	}
 
 	.star {
 		width: 75%;
 		height: 75%;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.container {
+		.component {
+			margin: 0 20px;
+		}
 	}
 }
