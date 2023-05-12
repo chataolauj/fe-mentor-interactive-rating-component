@@ -23,113 +23,118 @@ $orange: hsl(25, 97%, 53%);
 	width: 100vw;
 	height: 100vh;
 	background-color: $very-dark-blue;
+}
 
-	.component {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		width: 400px;
-		height: 400px;
-		background-color: $dark-blue;
-		color: $white;
-		border-radius: 25px;
+.component {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    height: 400px;
+    background-color: $dark-blue;
+    color: $white;
+    border-radius: 25px;
 
-		p {
-			font-size: 15px;
-			color: $light-grey;
-			line-height: 1.5em;
-		}
-	}
+    p {
+        font-size: 15px;
+        color: $light-grey;
+        line-height: 1.5em;
+    }
+}
 
-	#form-view {
-		padding: 30px;
-		.rating-group {
-			display: flex;
-			justify-content: space-between;
+/* Form View Styling */
 
-			.circle-container {
-				border: none;
+#form-view {
+    padding: 30px;
 
-				&:hover {
-					cursor: pointer;
-					background-color: $medium-grey;
-					color: $white;
-				}
+    button[type="submit"] {
+        padding: 12px;
+        background-color: $orange;
+        color: $white;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        border-radius: 50px;
+        border: none;
 
-				&:focus-visible {
-					outline: $orange solid;
-				}
-			}
+        &:hover {
+            cursor: pointer;
+        }
 
-			.active {
-				background-color: $orange;
-				color: $white;
-			}
-		}
+        &:active {
+            background-color: $white;
+            color: $orange;
+        }
 
-		button[type="submit"] {
-			padding: 12px;
-			background-color: $orange;
-			color: $white;
-			font-weight: 700;
-			letter-spacing: 0.2rem;
-			border-radius: 50px;
-			border: none;
+        &:focus-visible {
+            outline: solid $white;
+        }
+    }
+}
 
-			&:hover {
-				cursor: pointer;
-			}
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: hsla(217, 12%, 63%, 0.1);
+    color: $light-grey;
+}
 
-			&:active {
-				background-color: $white;
-				color: $orange;
-			}
+.star {
+    width: 75%;
+    height: 75%;
+}
 
-			&:focus-visible {
-				outline: solid $white;
-			}
-		}
-	}
+.rating-group {
+    display: flex;
+    justify-content: space-between;
 
-	#confirmation-view {
-		display: none;
-		padding: 40px 30px;
-		align-items: center;
+    .circle-container {
+        border: none;
+        
+        &:hover {
+            cursor: pointer;
+            background-color: $medium-grey;
+            color: $white;
+        }
 
-		img {
-			width: 50%;
-			height: auto;
-			object-fit: contain;
-		}
+        &:focus-visible {
+            outline: $orange solid;
+        }
+    }
+}
 
-		#rating-selection {
-			padding: 8px 25px 5px 25px;
-			border-radius: 50px;
-			background-color: hsla(217, 12%, 63%, 0.1);
-			color: $orange;
-		}
+.active-rating {
+    background-color: $orange !important;
+    color: $white;
+}
 
-		p {
-			text-align: center;
-		}
-	}
+/* Confirmation View Styling */
 
-	.circle-container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 40px;
-		height: 40px;
-		padding: 10px;
-		border-radius: 50px;
-		background-color: hsla(217, 12%, 63%, 0.1);
-		color: $light-grey;
-	}
+#confirmation-view {
+    display: none;
+    padding: 40px 30px;
+    align-items: center;
 
-	.star {
-		width: 75%;
-		height: 75%;
-	}
+    img {
+        width: 50%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+#rating-selection {
+    padding: 8px 25px 5px 25px;
+    border-radius: 50px;
+    background-color: hsla(217, 12%, 63%, 0.1);
+    color: $orange;
 }
 
 @media screen and (max-width: 450px) {
