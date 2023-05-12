@@ -4,7 +4,7 @@ function setRating(btn, ratingBtns) {
         return btn.classList.contains('active-rating');
     });
 
-    if(currentActive) {
+    if(currentActive && currentActive !== btn) {
         currentActive.classList.remove('active-rating');
     }
 
