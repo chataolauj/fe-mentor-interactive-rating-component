@@ -50,28 +50,34 @@ $orange: hsl(25, 97%, 53%);
 
 #form-view {
     padding: 30px;
+}
 
-    button[type="submit"] {
-        padding: 12px;
-        background-color: $orange;
+#submit-rating-btn {
+    padding: 12px;
+    background-color: $orange;
+    color: $white;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    border-radius: 50px;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: $white;
+        color: $orange;
+    }
+
+    &:focus-visible {
+        outline: solid $white;
+    }
+
+    &:disabled {
+        background-color: $medium-grey;
         color: $white;
-        font-weight: 700;
-        letter-spacing: 0.2rem;
-        border-radius: 50px;
-        border: none;
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        &:active {
-            background-color: $white;
-            color: $orange;
-        }
-
-        &:focus-visible {
-            outline: solid $white;
-        }
+        cursor: not-allowed;
     }
 }
 

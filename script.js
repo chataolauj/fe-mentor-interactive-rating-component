@@ -1,5 +1,7 @@
 
 function setRating(btn, ratingBtns) {
+    let submitBtn = document.querySelector('#submit-rating-btn');
+    
     let currentActive = ratingBtns.find((btn) => {
         return btn.classList.contains('active-rating');
     });
@@ -9,6 +11,7 @@ function setRating(btn, ratingBtns) {
     }
 
     btn.classList.add('active-rating');
+    submitBtn.disabled = false;
 }
 
 function submitRating() {
