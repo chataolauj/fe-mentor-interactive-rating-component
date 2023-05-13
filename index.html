@@ -21,20 +21,20 @@
 				feedback is appreciated to help us improve our offering!
 			</p>
 			<div class="rating-group">
-				<button class="circle-container">1</button>
-				<button class="circle-container">2</button>
-				<button class="circle-container">3</button>
-				<button class="circle-container">4</button>
-				<button class="circle-container">5</button>
+				<input type="button" value="1" class="circle-container"></input>
+				<input type="button" value="2" class="circle-container"></input>
+				<input type="button" value="3" class="circle-container"></input>
+				<input type="button" value="4" class="circle-container"></input>
+				<input type="button" value="5" class="circle-container"></input>
 			</div>
-			<button type="submit">SUBMIT</button>
+			<button id="submit-rating-btn" type="submit">SUBMIT</button>
 		</div>
-		<div id="confirmation-view" class="component">
+		<div id="confirmation-view" class="component hide-view">
 			<img
 				src="images/illustration-thank-you.svg"
 				alt="Thank you illustration"
 			/>
-			<span id="rating-selection">You selected 4 out of 5</span>
+			<span id="selected-rating-message"></span>
 			<h1>Thank you!</h1>
 			<p>
 				We appreciate you takign the time to give a rating. If you ever

@@ -42,6 +42,10 @@ $orange: hsl(25, 97%, 53%);
     }
 }
 
+.hide-view {
+    display: none;
+}
+
 /* Form View Styling */
 
 #form-view {
@@ -115,7 +119,6 @@ $orange: hsl(25, 97%, 53%);
 /* Confirmation View Styling */
 
 #confirmation-view {
-    display: none;
     padding: 40px 30px;
     align-items: center;
 
@@ -130,7 +133,7 @@ $orange: hsl(25, 97%, 53%);
     }
 }
 
-#rating-selection {
+#selected-rating-message {
     padding: 8px 25px 5px 25px;
     border-radius: 50px;
     background-color: hsla(217, 12%, 63%, 0.1);
